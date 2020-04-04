@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User_Reg</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/custom.css">
+    
+    <title>Etutor </title>
+</head>
+<body>
+  <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <!-- Navbar content -->
+          <a class="navbar-brand" href="index.html">Etutor</a>
+         <!-- shows button menu in small screen-->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <!-- mx-auto = for center display, ml-auto = for left , mr-auto for right -->
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="find_tutor.html">Find a tutor <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">How it works</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Become a tutor</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>  
+            </ul>
+            <span class="navbar-text">
+             <!---- Navbar text with an inline element -->
+            </span>
+
+            <form action="login.html">
+                  <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">  -->
+                   <button class="btn btn-outline-success my-2 my-sm-0"  type="submit"  >Login</button>
+                   
+               </form> 
+               
+
+
+          </div>
+      </nav>
+  </header>
+
+  
+  
+          
+  <div class="containertext-center ">
+          
+          <div class="row ">
+              <div class=" offset-md-4 col-md-4  ">
+                  <br>
+                  <br>
+                  
+                 <h3> <p class="text-white bg-dark text-center">
+                        RESGISTER PAGE
+                      </p>
+                  </h3>
+                      
+              </div>
+          </div>
+          
+      </div> 
+      
+
+
+
+<body>
+<form action="" name="form" method="post" onsubmit="return checkForm()" >
+    <table border="0" align="center" width="40%">
+        
+        <tr>
+            <td align="lift">
+                <p>If you are a tutor please click</p>
+                <button type="button" onclick="changeForm()" id="changeFormButton">I'm a tutor</button>
+            </td>
+        </tr>
+        <tr>
+            <td align="lift">
+                <sup ><span style="color: red; ">*</span></sup> User Name:
+            </td>
+            <td><label for="username"></label><input type="text" onkeyup="checkUserName()" minlength="6" maxlength="12" name="username" id="username" class="input_class"> </td>
+        </tr>
+
+        <tr>
+            <td align="lift">
+                <sup><span style="color: red; ">*</span></sup> Password:
+            </td>
+            <td><label for="password"></label><input type="password" minlength="8" name="password" id="password" class="input_class"></td>
+        </tr>
+
+        <tr>
+            <td align="lift">
+                <sup><span style="color: red; ">*</span></sup> Confirm Password:
+            </td>
+            <td><label for="rePassword"></label><input type="Password" name="rePassword" id="rePassword" class="input_class"></td>
+        </tr>
+
+        <tr>
+            <td align="lift">
+                <sup><span style="color: red; ">*</span></sup>First Name:
+            </td>
+            <td><label for="fName"></label><input type="text" name="fName" id="fName" onchange="checkfName(document)" class="input_class"> </td>
+        </tr>
+
+        <tr>
+            <td align="lift">
+                  Last Name:
+            </td>
+            <td>
+                <label for="lName"></label><input type="text" name="lName" id="lName" class="input_class">
+            </td>
+        </tr>
+
+        <tr>
+            <td align="lift">
+                <sup><span style="color: red; ">*</span></sup>
+                Email:
+            </td>
+            <td><label for="email"></label><input type="email" name="email" id="email" class="input_class"> </td>
+        </tr>
+
+        <tr>
+            <td align="lift">
+                Phone Number:
+            </td>
+            <td>
+                <label for="phone"></label><input type="number" name="phone" id="phone" class="input_class">
+            </td>
+        </tr>
+
+        <tr>
+            <td align="lift">
+                Date Of Birth:
+            </td>
+            <td>
+                <label for="DOB"></label><input type="date" name="DOB" id="DOB" class="input_class">
+            </td>
+        </tr>
+        <tr>
+            <td align="lift">
+                Gender:
+            </td>
+            <td>
+                <select name="sex" id="sex">
+                    <option value="--">--</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td id="tutorUpload"></td>
+        </tr>
+
+        <tr>
+            <td align="center" colspan="2"><!--combine two rows -->
+                <label>
+                    <input type="checkbox" name="termsBox" id="termsBox"/>
+                </label>I accept <a href="https://www.proquest.com/about/terms-and-conditions.html"> terms and conditions</a>.
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center" colspan="2">
+                <input type="submit" class="form_control" value="Submit"/>
+                <input type="reset" class="form control" value="Reset"/>
+            </td>
+        </tr>
+
+
+    </table>
+</form>
+
+
+
+<script type="text/javascript">
+
+    function changeForm() {
+        document.getElementById("tutorUpload").innerHTML = '<div class="form-group">' +
+            '<label for="certificate">Upload your certifications</label>' +
+            '<input type="file" id="certificate" required/>' + //file are required when its appears
+            '<p class="help"><span style="color: red; ">*</span> Please upload you certifications to prove us you are a tutor.</p>' +
+            '</div>' +
+            "<button type='button' onclick='window.location.reload()'> I'm a student </button>"
+
+        //additional information need be proved by tutor for manual review
+    }
+
+</script>
+
+<script type="text/javascript">
+    //all validations
+    function checkForm(document) {
+        if (form.username.value ===''){
+            alert('Username must be entered');
+            form.username.focus();
+            return false;
+        }
+        if (form.password.value === '' ){
+            alert('password cant be empty!');
+            form.password.focus();
+            return false;
+        }
+        if (form.password.value.length<8){
+            alert('password need at least 8 characters! ');
+            form.password.focus();
+            return false;
+        }
+        if (form.password.value!==form.rePassword.value){
+            alert('you password not match, try again!');
+            form.rePassword.focus();
+            return false;
+        }
+        if (form.fName.value === ''){
+            alert('Please enter you name!');
+            form.fName.focus();
+            return false;
+        }
+        if (form.email.value === ''){
+            alert('Please enter you Email!');
+            form.email.focus();
+            return  false;
+        }
+        if (termsBox.checked ===false){
+            alert("please accept terms and conditions ");
+            form.termsBox.focus();
+            return false
+        }
+
+
+
+        return true;
+
+
+    }
+
+
+</script>
+<hr class="my-4">
+
+ <!-- Footer -->
+ <footer class="page-footer font-small blue pt-4" >
+
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
+      
+          <!-- Grid row -->
+          <div class="row">
+      
+            <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-3">
+      
+              <!-- Content -->
+              <h5 class="text-uppercase">contact us</h5>
+              <p>We are her to help. <br>
+                If you have any queries feel free to 
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">contact us</button>
+                <br>
+                +61422033078 <br>
+                support@etutor.com
+              </p>
+              <img class="mb-2" src="icon/icon_fb.png" alt="" width="24" height="24">
+              <img class="mb-2" src="icon/icon_tw.png" alt="" width="24" height="24">
+              <img class="mb-2" src="icon/icon_yt.png" alt="" width="24" height="24">
+      
+            </div>
+            <!-- Grid column -->
+      
+            <hr class="clearfix w-100 d-md-none pb-3">
+      
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+      
+              <!-- Links -->
+              <h5 class="text-uppercase">Student</h5>
+      
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#!">Find tutor</a>
+                </li>
+                <li>
+                  <a href="#!">Free resources</a>
+                </li>
+                <li>
+                  <a href="#!">Courses</a>
+                </li>
+                
+                <li>
+                    <a href="#!">FAQs</a>
+                </li>
+                
+              </ul>
+      
+            </div>
+            <!-- Grid column -->
+      
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+      
+              <!-- Links -->
+              <h5 class="text-uppercase">tutor</h5>
+      
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#!">Member fee</a>
+                </li>
+                <li>
+                  <a href="#!"> Tutor test </a>
+                </li>
+                <li>
+                  <a href="#!">Tutor training</a>
+                </li>
+                <li>
+                    <a href="#!">Tutor reviews</a>
+                </li>
+                
+              </ul>
+      
+            </div>
+            <!-- Grid column -->
+      
+          </div>
+          <!-- Grid row -->
+      
+        </div>
+        <!-- Footer Links -->
+      
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+          <a href="www.etutor.com"> Etutor.com</a>
+        </div>
+        <!-- Copyright -->
+      
+      </footer>
+      <!-- Footer -->
+       
+    
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="js/jquery-3.3.1.slim.min.js" ></script>
+        <script src="js/popper.js/1.14.7/umd/popper.min.js" ></script>
+        <script src="js/bootstrap.min.js" ></script>
+      </body>
+    </html>
