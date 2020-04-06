@@ -117,14 +117,12 @@ while($row = mysqli_fetch_assoc($result))
      <?php                         
                     echo  ' <img src = assets/img/'. h($row['userImage'].' class="img-fluid" alt="Responsive image" height = 200 width = 150>'); 
                     /*
-                        not working>> class="img-fluid" alt="Responsive image"
+                         class="img-fluid" ---> to maintain aspect ratio
                     */
                         
           ?>              
 
-                             
-
-                        
+                                                 
                             
                             </div>
                             
