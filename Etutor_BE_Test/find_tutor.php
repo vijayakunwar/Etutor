@@ -31,39 +31,40 @@
             
             <hr class="my-4">
 
-            <form action="find_tutor.php" method = "post">
+            <form action="search_result.php" method = "post">
                 <div class="form-row">
                     <div class="col-sm">
                         Subject
-                        <select name="Subject[]" class="form-control">
-                            <option>All Subject</option>
-                            <option>Html</option>
-                            <option>javascript</option>
-                            <option>CSS3 </option>
+                        <!-- <select name="Subject[]" class="form-control">-->
+                        <select name="subject" class="form-control">
+                            <option value="all" >All Subject</option>
+                            <option value="html">Html</option>
+                            <option value="javascript">javascript</option>
+                            <option value="css3">CSS3 </option>
                             
                         </select>
                     </div>
                     <div class="col-sm">
                         Delivery
-                        <select name="Mode[]" class = "form-control">
-                            <option > All </option>
-                            <option > distance</option>
-                            <option > onsite</option>
+                        <select name="mode" class = "form-control">
+                            <option value="all"> All </option>
+                            <option value="distance"> distance</option>
+                            <option value="onsite"> onsite</option>
                             
                         </select>
                     </div>
                     <div class="col-sm">
                         Gender
-                        <select name="Gender[]" class = "form-control">
-                            <option > All </option>
-                            <option > Female</option>
-                            <option > Male</option>
+                        <select name="gender" class = "form-control">
+                            <option value="all" > All </option>
+                            <option value="female"> Female</option>
+                            <option value="male"> Male</option>
                             
                         </select>
 
                     </div> 
                 </div>
-                <input type = 'submit' name = 'submit' value = Submit class="btn btn-primary btn-lg" href="" role="button">
+                <input type = 'submit' name = 'submit' value = submit class="btn btn-primary btn-lg" href="" role="button">
             </form>
             
             <hr class="my-4">
